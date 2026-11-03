@@ -8,10 +8,11 @@
 <link rel="icon" href="/pour-nine/icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{color-scheme:dark;--bg:#22123A;--panel:#2C1A4A;--line:#45306A;--ink:#F6EEFF;--dim:#B3A2D1;
-    --accent:#FF86C2;--font:"Fredoka",system-ui,-apple-system,"Segoe UI",sans-serif;
+  :root{color-scheme:light;--bg:#1E7BE0;--sky:linear-gradient(160deg,#00D1C1 0%,#1E7BE0 50%,#7B3DE8 100%);
+    --panel:#FFFFFF;--ink:#10204A;--dim:#6F85B8;--line:rgba(16,32,74,.12);--accent:#FF3D8B;--gold:#FFC53D;
+    --shadow:0 8px 22px rgba(8,20,54,.28);--font:"Fredoka",system-ui,-apple-system,"Segoe UI",sans-serif;
     box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
   *,*::before,*::after{box-sizing:inherit}
   body{margin:0;background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px;
@@ -29,12 +30,24 @@
   li{margin:5px 0}
   p b{color:var(--ink)}
   .get{display:inline-block;text-decoration:none;font-weight:700;padding:12px 20px;margin-top:8px}
-  body{background:radial-gradient(120% 60% at 50% -10%,#3A1E5C 0,var(--bg) 60%) fixed var(--bg)}
-  h1{font-weight:700;letter-spacing:-.01em;font-size:32px}
-  h2{font-weight:500;font-size:19px;color:var(--accent)}
+  .chapters{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+  .chapters li{margin:0;padding:12px 14px}
+  .chapters b{display:block}
+  .chapters span{color:var(--dim);font-size:14.5px}
+  html{min-height:100%;background:var(--bg) var(--sky)}
+  body{background:transparent;padding:28px 12px 48px}
+  .wrap{background:var(--panel);border-radius:28px;box-shadow:var(--shadow);padding:34px 22px 30px}
+  h1{font-weight:700;font-size:32px;letter-spacing:-.01em}
+  h2{font-weight:600;font-size:19px;color:var(--accent)}
   .back{font-weight:500}
-  .icon{border-radius:28px}
-  .get{background:linear-gradient(90deg,#FF86C2,#9B8CFF);color:#22123A;border-radius:999px}
+  a{font-weight:500}
+  .icon{border-radius:24px;box-shadow:var(--shadow)}
+  .chapters li{background:#F3F7FF;border-radius:16px;border-left:5px solid var(--c,var(--accent))}
+  .chapters li:nth-child(even){--c:var(--gold)}
+  .chapters b{font-weight:600}
+  footer{margin-top:40px}
+  .get{background:var(--accent);color:#FFFFFF;border-radius:999px;box-shadow:var(--shadow)}
+  @media (min-width:760px){body{padding:56px 22px 72px}.wrap{padding:44px 40px 36px}}
 
 </style>
 </head>
@@ -49,13 +62,17 @@
 non-commercial use. You may not resell it, repackage it, or redistribute it as your own.</p>
 
 <h2>Ads</h2>
-<p>The game is funded by advertising. Some ads are optional and give you an in-game reward
-for watching; others appear between levels. Rewards have no cash value and exist only
-inside the game.</p>
+<p>The game is funded by advertising. Rewarded videos are optional: you choose to watch one
+in exchange for a hint or an undo. Ads between levels are capped and never appear in the
+middle of a level.</p>
+
+<h2>Coins, streaks and themes</h2>
+<p>Coins, daily streaks, hints, undos and unlockable themes exist only inside the game. They
+have no cash value and cannot be exchanged, transferred or refunded.</p>
 
 <h2>No warranty</h2>
 <p>The game is provided as it is. We do not promise it will be free of bugs, available at
-all times, or suitable for any particular purpose. Your progress is stored on your device only — if you uninstall the app or
+all times, or suitable for any particular purpose. Your progress, coins and streak are stored on your device only &mdash; if you uninstall the app or
 clear its data, it is gone, and we cannot recover it.</p>
 
 <h2>Limitation of liability</h2>

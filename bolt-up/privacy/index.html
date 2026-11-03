@@ -8,10 +8,12 @@
 <link rel="icon" href="/bolt-up/icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-  :root{color-scheme:dark;--bg:#1A1B1E;--panel:#222327;--line:#393B41;--ink:#ECEDEF;--dim:#9A9DA5;
-    --accent:#FFB21A;--font:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  :root{color-scheme:light;--bg:#FFF3DC;--panel:#FFFFFF;--ink:#2E1A0E;--dim:#8A6B52;
+    --line:rgba(46,26,14,.16);--brass:#FFB224;--sun:linear-gradient(135deg,#FFD23F,#FF9A3C);
+    --outline:2px solid var(--ink);--drop:0 5px 0 rgba(46,26,14,.22);
+    --accent:var(--ink);--font:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
     box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
   *,*::before,*::after{box-sizing:inherit}
   body{margin:0;background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px;
@@ -29,16 +31,20 @@
   li{margin:5px 0}
   p b{color:var(--ink)}
   .get{display:inline-block;text-decoration:none;font-weight:700;padding:12px 20px;margin-top:8px}
-  body{border-top:6px solid transparent;
-    border-image:repeating-linear-gradient(-45deg,var(--accent) 0 12px,var(--bg) 12px 24px) 6}
-  h1,h2{font-family:"Barlow Condensed",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em}
-  h1{font-weight:800;font-size:36px}
-  h2{font-weight:600;font-size:20px;color:var(--accent)}
-  .back{font-family:"Barlow Condensed",system-ui,sans-serif;font-weight:600;font-size:15px;
-    text-transform:uppercase;letter-spacing:.06em}
-  .icon{border-radius:6px}
-  .get{background:var(--accent);color:#1A1B1E;border-radius:2px;
-    font-family:"Barlow Condensed",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.06em}
+  .chapters{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+  .chapters li{margin:0;padding:12px 14px}
+  .chapters b{display:block}
+  .chapters span{color:var(--dim);font-size:14.5px}
+  h1,h2{font-family:"Titan One",system-ui,sans-serif;font-weight:400;letter-spacing:.01em}
+  h1{font-size:36px;line-height:1.15}
+  h2{font-size:20px}
+  a{text-decoration-color:var(--brass);text-decoration-thickness:3px;text-underline-offset:3px;font-weight:700}
+  .back{font-weight:800}
+  .sub{font-size:15px}
+  .icon{border-radius:22px;border:var(--outline);box-shadow:var(--drop)}
+  .chapters li{background:var(--panel);border:var(--outline);border-radius:16px;box-shadow:var(--drop)}
+  .chapters b{font-family:"Titan One",system-ui,sans-serif;font-weight:400;font-size:17px}
+  .get{background:var(--sun);color:var(--ink);border:var(--outline);border-radius:14px;box-shadow:var(--drop)}
 
 </style>
 </head>
@@ -52,13 +58,14 @@
 app collects and why.</p>
 
 <h2>What we collect directly</h2>
-<p>Nothing. Bolt Up has no account, no login and no server of our own. Your progress and your sound setting
+<p>Nothing. Bolt Up has no account, no login and no server of our own. Your progress, coins, daily streak, unlocked themes and sound setting
 are stored only on your own device and are never transmitted to us.</p>
 
 <h2>What our advertising partner collects</h2>
-<p>The app shows ads through Google AdMob. To serve and measure those ads, Google collects
-your device's Advertising ID along with technical information such as device model,
-operating system version, coarse location derived from your IP address, and your
+<p>The app shows ads through Google AdMob: optional rewarded videos you choose to watch for a
+hint or an undo, and a capped number of ads between levels. To serve and measure those ads,
+Google collects your device's Advertising ID along with technical information such as device
+model, operating system version, coarse location derived from your IP address, and your
 interactions with ads.</p>
 <p>We do not receive this data in an identifiable form. We see only aggregate earnings and
 performance reports.</p>

@@ -8,10 +8,11 @@
 <link rel="icon" href="/arrow-out/icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  :root{color-scheme:dark;--bg:#0B201E;--panel:#102B28;--line:#1F4440;--ink:#E4F5F0;--dim:#86ABA4;
-    --accent:#5EEBC0;--font:"Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  :root{color-scheme:dark;--bg:#07040F;--panel:#140C26;--board:#0B0618;--ink:#FFFFFF;--dim:#9D8FC4;
+    --line:rgba(255,255,255,.1);--yellow:#FFD12E;--pink:#FF2E7E;--purple:#9B5CFF;--teal:#00E8C6;
+    --accent:var(--teal);--font:"Rubik",system-ui,-apple-system,"Segoe UI",sans-serif;
     box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
   *,*::before,*::after{box-sizing:inherit}
   body{margin:0;background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px;
@@ -29,13 +30,26 @@
   li{margin:5px 0}
   p b{color:var(--ink)}
   .get{display:inline-block;text-decoration:none;font-weight:700;padding:12px 20px;margin-top:8px}
-  h1{font-weight:700;letter-spacing:-.025em}
-  h1::after{content:" \2192";color:var(--accent)}
-  h2{font-weight:700}
-  h2::before{content:"\2192\00a0";color:var(--accent)}
-  .back{font-weight:600}
-  .icon{border-radius:20px}
-  .get{background:var(--accent);color:var(--bg);border-radius:999px}
+  .chapters{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+  .chapters li{margin:0;padding:12px 14px}
+  .chapters b{display:block}
+  .chapters span{color:var(--dim);font-size:14.5px}
+  h1,h2{font-family:"Russo One",system-ui,sans-serif;font-weight:400}
+  h1{font-size:32px;letter-spacing:.01em}
+  h1::after{content:"";display:block;height:4px;width:132px;margin-top:10px;border-radius:2px;
+    background:linear-gradient(90deg,var(--yellow) 0 25%,var(--pink) 25% 50%,var(--purple) 50% 75%,var(--teal) 75%)}
+  h2{font-size:19px}
+  h2::before{content:"\2192\00a0";color:var(--pink)}
+  .back{font-weight:500}
+  .icon{border-radius:20px;box-shadow:0 0 0 1px var(--line),0 0 28px rgba(155,92,255,.35)}
+  .chapters li{background:var(--board);border:1px solid var(--line);border-left:4px solid var(--c);border-radius:10px}
+  .chapters li:nth-child(1){--c:var(--yellow)}
+  .chapters li:nth-child(2){--c:var(--pink)}
+  .chapters li:nth-child(3){--c:var(--purple)}
+  .chapters li:nth-child(4){--c:var(--teal)}
+  .chapters b{font-family:"Russo One",system-ui,sans-serif;font-weight:400;color:var(--c)}
+  footer{border-top-color:var(--line)}
+  .get{background:var(--yellow);color:var(--bg);border-radius:999px}
 
 </style>
 </head>
@@ -50,13 +64,17 @@
 non-commercial use. You may not resell it, repackage it, or redistribute it as your own.</p>
 
 <h2>Ads</h2>
-<p>The game is funded by advertising. Some ads are optional and give you an in-game reward
-for watching; others appear between levels. Rewards have no cash value and exist only
-inside the game.</p>
+<p>The game is funded by advertising. Rewarded videos are optional: you choose to watch one
+in exchange for a hint or an undo. Ads between levels are capped and never appear in the
+middle of a level.</p>
+
+<h2>Coins, streaks and themes</h2>
+<p>Coins, daily streaks, hints, undos and unlockable themes exist only inside the game. They
+have no cash value and cannot be exchanged, transferred or refunded.</p>
 
 <h2>No warranty</h2>
 <p>The game is provided as it is. We do not promise it will be free of bugs, available at
-all times, or suitable for any particular purpose. Your progress is stored on your device only — if you uninstall the app or
+all times, or suitable for any particular purpose. Your progress, coins and streak are stored on your device only &mdash; if you uninstall the app or
 clear its data, it is gone, and we cannot recover it.</p>
 
 <h2>Limitation of liability</h2>

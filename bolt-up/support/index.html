@@ -8,10 +8,12 @@
 <link rel="icon" href="/bolt-up/icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-  :root{color-scheme:dark;--bg:#1A1B1E;--panel:#222327;--line:#393B41;--ink:#ECEDEF;--dim:#9A9DA5;
-    --accent:#FFB21A;--font:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  :root{color-scheme:light;--bg:#FFF3DC;--panel:#FFFFFF;--ink:#2E1A0E;--dim:#8A6B52;
+    --line:rgba(46,26,14,.16);--brass:#FFB224;--sun:linear-gradient(135deg,#FFD23F,#FF9A3C);
+    --outline:2px solid var(--ink);--drop:0 5px 0 rgba(46,26,14,.22);
+    --accent:var(--ink);--font:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
     box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
   *,*::before,*::after{box-sizing:inherit}
   body{margin:0;background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px;
@@ -29,16 +31,20 @@
   li{margin:5px 0}
   p b{color:var(--ink)}
   .get{display:inline-block;text-decoration:none;font-weight:700;padding:12px 20px;margin-top:8px}
-  body{border-top:6px solid transparent;
-    border-image:repeating-linear-gradient(-45deg,var(--accent) 0 12px,var(--bg) 12px 24px) 6}
-  h1,h2{font-family:"Barlow Condensed",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em}
-  h1{font-weight:800;font-size:36px}
-  h2{font-weight:600;font-size:20px;color:var(--accent)}
-  .back{font-family:"Barlow Condensed",system-ui,sans-serif;font-weight:600;font-size:15px;
-    text-transform:uppercase;letter-spacing:.06em}
-  .icon{border-radius:6px}
-  .get{background:var(--accent);color:#1A1B1E;border-radius:2px;
-    font-family:"Barlow Condensed",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.06em}
+  .chapters{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+  .chapters li{margin:0;padding:12px 14px}
+  .chapters b{display:block}
+  .chapters span{color:var(--dim);font-size:14.5px}
+  h1,h2{font-family:"Titan One",system-ui,sans-serif;font-weight:400;letter-spacing:.01em}
+  h1{font-size:36px;line-height:1.15}
+  h2{font-size:20px}
+  a{text-decoration-color:var(--brass);text-decoration-thickness:3px;text-underline-offset:3px;font-weight:700}
+  .back{font-weight:800}
+  .sub{font-size:15px}
+  .icon{border-radius:22px;border:var(--outline);box-shadow:var(--drop)}
+  .chapters li{background:var(--panel);border:var(--outline);border-radius:16px;box-shadow:var(--drop)}
+  .chapters b{font-family:"Titan One",system-ui,sans-serif;font-weight:400;font-size:17px}
+  .get{background:var(--sun);color:var(--ink);border:var(--outline);border-radius:14px;box-shadow:var(--drop)}
 
 </style>
 </head>
@@ -50,18 +56,24 @@
 
 <p>Something broken, or an idea for the game? Email
 <a href="mailto:theingredientlist.co@gmail.com">theingredientlist.co@gmail.com</a>
-and include your device model and Android version — it makes bugs far easier to track down.</p>
+and include your device model and Android version &mdash; it makes bugs far easier to track down.</p>
 
 <h2>Common questions</h2>
 
-<p><b>I lost my progress.</b><br>
-Progress lives only on your device. Uninstalling the app or clearing its data removes it, and there is no backup to restore from.</p>
+<p><b>A bolt won't come out in one go.</b><br>
+That's a rusted bolt. It takes two turns to unscrew &mdash; you'll see it in Rust belt and Full shift.</p>
 
-<p><b>The ad didn't give me my reward.</b><br>
-The reward only lands if the ad plays all the way through. If you closed it early, nothing is granted. If it completed and you still got nothing, email us.</p>
+<p><b>One holder is locked.</b><br>
+In Short bench the third holder is padlocked until you've cleared six bolts. Plan around having only two.</p>
 
-<p><b>I'm out of moves.</b><br>
-Restart the level — there is always a solution from the starting position. Keeping one bolt empty for as long as you can usually helps.</p>
+<p><b>The ad didn't give me my hint or undo.</b><br>
+The reward only lands if the video plays all the way through. If you closed it early, nothing is granted. If it completed and you still got nothing, email us.</p>
+
+<p><b>Will an ad interrupt a level?</b><br>
+No. Videos only play when you ask for a hint or an undo. Between-level ads are capped and never appear mid-level.</p>
+
+<p><b>I lost my progress, coins or streak.</b><br>
+They live only on your device. Uninstalling the app or clearing its data removes them, and there is no backup to restore from.</p>
 
 <p><b>Does it work offline?</b><br>
 Yes. Only the ads need a connection.</p>

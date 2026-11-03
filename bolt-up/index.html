@@ -4,14 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Bolt Up</title>
-<meta name="description" content="A nuts-and-bolts sorting puzzle. Free on Android.">
+<meta name="description" content="Unscrew the bolts into matching holders and clear every plate. Free on Android.">
 <link rel="icon" href="/bolt-up/icon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-  :root{color-scheme:dark;--bg:#1A1B1E;--panel:#222327;--line:#393B41;--ink:#ECEDEF;--dim:#9A9DA5;
-    --accent:#FFB21A;--font:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  :root{color-scheme:light;--bg:#FFF3DC;--panel:#FFFFFF;--ink:#2E1A0E;--dim:#8A6B52;
+    --line:rgba(46,26,14,.16);--brass:#FFB224;--sun:linear-gradient(135deg,#FFD23F,#FF9A3C);
+    --outline:2px solid var(--ink);--drop:0 5px 0 rgba(46,26,14,.22);
+    --accent:var(--ink);--font:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
     box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
   *,*::before,*::after{box-sizing:inherit}
   body{margin:0;background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px;
@@ -29,16 +31,20 @@
   li{margin:5px 0}
   p b{color:var(--ink)}
   .get{display:inline-block;text-decoration:none;font-weight:700;padding:12px 20px;margin-top:8px}
-  body{border-top:6px solid transparent;
-    border-image:repeating-linear-gradient(-45deg,var(--accent) 0 12px,var(--bg) 12px 24px) 6}
-  h1,h2{font-family:"Barlow Condensed",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.02em}
-  h1{font-weight:800;font-size:36px}
-  h2{font-weight:600;font-size:20px;color:var(--accent)}
-  .back{font-family:"Barlow Condensed",system-ui,sans-serif;font-weight:600;font-size:15px;
-    text-transform:uppercase;letter-spacing:.06em}
-  .icon{border-radius:6px}
-  .get{background:var(--accent);color:#1A1B1E;border-radius:2px;
-    font-family:"Barlow Condensed",system-ui,sans-serif;text-transform:uppercase;letter-spacing:.06em}
+  .chapters{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+  .chapters li{margin:0;padding:12px 14px}
+  .chapters b{display:block}
+  .chapters span{color:var(--dim);font-size:14.5px}
+  h1,h2{font-family:"Titan One",system-ui,sans-serif;font-weight:400;letter-spacing:.01em}
+  h1{font-size:36px;line-height:1.15}
+  h2{font-size:20px}
+  a{text-decoration-color:var(--brass);text-decoration-thickness:3px;text-underline-offset:3px;font-weight:700}
+  .back{font-weight:800}
+  .sub{font-size:15px}
+  .icon{border-radius:22px;border:var(--outline);box-shadow:var(--drop)}
+  .chapters li{background:var(--panel);border:var(--outline);border-radius:16px;box-shadow:var(--drop)}
+  .chapters b{font-family:"Titan One",system-ui,sans-serif;font-weight:400;font-size:17px}
+  .get{background:var(--sun);color:var(--ink);border:var(--outline);border-radius:14px;box-shadow:var(--drop)}
 
 </style>
 </head>
@@ -47,13 +53,26 @@
 <a class="back" href="/">&larr; The Ingredient List</a>
 <img class="icon" src="/bolt-up/icon.svg" alt="">
 <h1 style="margin-top:18px">Bolt Up</h1>
-<p class="sub">Unscrew, sort and stack the nuts until every bolt holds one colour.</p>
+<p class="sub">Unscrew bolts into the holder of the matching colour and clear every plate.</p>
 
-<p>Each bolt carries a stack of coloured nuts. Lift the top nut and drop it onto a bolt
-with room — and a matching colour on top. Sort every bolt down to a single colour to clear the
-level.</p>
+<p>Each plate is held down by coloured bolts. Unscrew one and it drops into the holder of
+the same colour. Clear every bolt from every plate to finish the level &mdash; but holders
+fill up, so pick your order.</p>
 
-<p>No timer. Works offline. Free.</p>
+<h2>Chapters</h2>
+<ul class="chapters">
+  <li><b>Starter bench</b><span>The base game. Match bolts to holders and clear the plates.</span></li>
+  <li><b>Rust belt</b><span>Rusted bolts take two turns to come out.</span></li>
+  <li><b>Short bench</b><span>Only two holders open. The third is padlocked until you've cleared six bolts.</span></li>
+  <li><b>Full shift</b><span>Rust, two holders and seven plates, all at once.</span></li>
+</ul>
+
+<p>Four chapters of 30 levels each.</p>
+
+<p>Daily streak. Coins. Themes you unlock as you play.</p>
+
+<p>Ads are optional: watch a short video for a hint or an undo if you want one. Between-level
+ads are capped, and never appear in the middle of a level.</p>
 
 <!-- Play Store button: uncomment and set the real listing URL once the app is live.
 <p><a class="get" href="https://play.google.com/store/apps/details?id=PACKAGE_ID">Get it on Google Play</a></p>

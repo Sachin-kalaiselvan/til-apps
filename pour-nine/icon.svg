@@ -1,7 +1,8 @@
 <svg viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
-  <rect width="54" height="54" rx="14" fill="#2C1A4A"/>
-  <g fill="none" stroke="#B3A2D1" stroke-width="2"><path d="M12 11v28a5 5 0 0 0 10 0V11"/><path d="M32 11v28a5 5 0 0 0 10 0V11"/></g>
-  <path d="M13 30h8v9a4 4 0 0 1-8 0z" fill="#FF86C2"/>
-  <path d="M13 22h8v8h-8z" fill="#9B8CFF"/>
-  <path d="M33 26h8v13a4 4 0 0 1-8 0z" fill="#FF86C2"/>
+  <defs><linearGradient id="pn-sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00D1C1"/><stop offset=".5" stop-color="#1E7BE0"/><stop offset="1" stop-color="#7B3DE8"/></linearGradient></defs>
+  <rect width="54" height="54" rx="14" fill="url(#pn-sky)"/>
+  <g fill="#FFFFFF" fill-opacity=".9"><path d="M11 10h10v29a5 5 0 0 1-10 0z"/><path d="M33 10h10v29a5 5 0 0 1-10 0z"/></g>
+  <path d="M13 30h6v9a3 3 0 0 1-6 0z" fill="#FF3D8B"/>
+  <path d="M13 22h6v8h-6z" fill="#FFC53D"/>
+  <path d="M35 26h6v13a3 3 0 0 1-6 0z" fill="#FF3D8B"/>
 </svg>
