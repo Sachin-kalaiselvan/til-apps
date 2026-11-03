@@ -2,52 +2,126 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>The Ingredient List — Apps</title>
-<meta name="description" content="Apps and games by The Ingredient List.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Ingredient List — apps and games</title>
+<meta name="description" content="Apps and games made by The Ingredient List, Bengaluru.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#13172a;--panel:#191e35;--line:#2c3454;--ink:#eae6f5;--dim:#9298b8;
-    --gold:#f2c14e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);
-    padding-bottom:env(safe-area-inset-bottom,0px)}
-  *,*::before,*::after{box-sizing:inherit}
-  body{margin:0;background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px;
-    font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
-    -webkit-text-size-adjust:100%}
-  .wrap{max-width:720px;margin:0 auto;padding:46px 22px 90px}
-  a{color:var(--gold)}
-  h1{font-size:30px;margin:0 0 4px;letter-spacing:-.02em;font-weight:800}
-  h2{font-size:18px;margin:34px 0 8px;font-weight:800}
-  .sub{color:var(--dim);font-size:14px;margin:0 0 30px}
-  .back{display:inline-block;color:var(--dim);font-size:13.5px;text-decoration:none;
-    margin-bottom:26px;font-weight:600}
-  .back:hover{color:var(--ink)}
-  footer{margin-top:52px;padding-top:20px;border-top:1px solid var(--line);
-    color:var(--dim);font-size:13px}
-  .card{display:flex;gap:15px;align-items:center;text-decoration:none;color:inherit;
-    background:var(--panel);border:1px solid var(--line);border-radius:14px;
-    padding:16px;margin-bottom:11px}
-  .card:hover{border-color:var(--gold)}
-  .card img{width:58px;height:58px;border-radius:13px;flex:none}
-  .card b{display:block;font-size:16.5px}
-  .card span{color:var(--dim);font-size:13.5px}
-  ul{padding-left:20px}
-  li{margin:5px 0}
-  p b{color:var(--ink)}
+  :root{
+    color-scheme: dark;
+    --bg:#0D1420;
+    --card:#141D2C;
+    --edge:#223049;
+    --fg:#F2F5FA;
+    --muted:#8095B0;
+    --link:#7FB2FF;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-padding-top:env(safe-area-inset-top,0px)}
+  body{
+    margin:0;background:var(--bg);color:var(--fg);
+    font:16px/1.6 "Archivo",ui-sans-serif,system-ui,-apple-system,sans-serif;
+    padding:clamp(40px,9vw,88px) 22px 72px;
+    padding-top:calc(clamp(40px,9vw,88px) + env(safe-area-inset-top,0px));
+    padding-bottom:calc(72px + env(safe-area-inset-bottom,0px));
+  }
+  main{max-width:860px;margin:0 auto}
 
+  h1{
+    font-weight:800;font-stretch:112%;letter-spacing:-.025em;
+    font-size:clamp(32px,6.4vw,44px);line-height:1.05;margin:0 0 8px;
+  }
+  .tag{color:var(--muted);font-size:clamp(16px,2.4vw,18px);margin:0 0 clamp(28px,5vw,44px)}
+
+  .shelf{display:flex;flex-direction:column;gap:14px;margin:0;padding:0;list-style:none}
+  .app{
+    display:flex;align-items:center;gap:18px;
+    padding:18px;border:1px solid var(--edge);border-radius:14px;background:var(--card);
+    text-decoration:none;color:inherit;
+    transition:border-color .2s ease, transform .16s ease, background .2s ease;
+  }
+  .app:hover{border-color:#39527C;background:#17222F;transform:translateY(-1px)}
+  .app:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+  .app .ico{
+    width:54px;height:54px;flex:none;border-radius:12px;
+    display:flex;align-items:center;justify-content:center;overflow:hidden;
+  }
+  .app .ico svg{width:100%;height:100%;display:block}
+  .app .txt{min-width:0}
+  .app .nm{display:block;font-weight:700;font-stretch:108%;font-size:19px;letter-spacing:-.012em}
+  .app .ds{display:block;color:var(--muted);font-size:15px;margin-top:3px}
+
+  footer{
+    margin-top:clamp(40px,7vw,64px);padding-top:20px;border-top:1px solid var(--edge);
+    color:var(--muted);font-size:15px;
+  }
+  footer a{color:var(--link);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+
+  @media (prefers-reduced-motion: reduce){ .app{transition:none} .app:hover{transform:none} }
 </style>
 </head>
 <body>
-<div class="wrap">
-<h1>The Ingredient List</h1>
-<p class="sub">Apps and games we make.</p>
+<main>
+  <h1>The Ingredient List</h1>
+  <p class="tag">Apps and games we make.</p>
 
-<a class="card" href="/coreblocks">
-  <img src="/coreblocks/icon.png" alt="">
-  <div><b>Core Blocks</b><span>Block puzzle with a merge twist · Android</span></div>
-</a>
+  <ul class="shelf">
 
-<footer>theingredientlist.co@gmail.com</footer>
-</div></body></html>
+    <!-- ───────── Core Blocks ───────── -->
+    <li>
+      <a class="app" href="/core-blocks/">
+        <span class="ico" aria-hidden="true">
+          <svg viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+            <rect width="54" height="54" rx="12" fill="#1E2A3C"/>
+            <rect x="9"  y="9"  width="16" height="16" rx="3" fill="#E8584A"/>
+            <rect x="29" y="9"  width="16" height="16" rx="3" fill="#56C06B"/>
+            <rect x="9"  y="29" width="16" height="16" rx="3" fill="#4A8FE8"/>
+            <rect x="29" y="29" width="16" height="16" rx="3" fill="#F0B429"/>
+          </svg>
+        </span>
+        <span class="txt">
+          <span class="nm">Core Blocks</span>
+          <span class="ds">Block puzzle with a merge twist &middot; Android</span>
+        </span>
+      </a>
+    </li>
+
+    <!-- ───────── Bandit Scan ───────── -->
+    <li>
+      <a class="app" href="/bandit-scan/">
+        <span class="ico" aria-hidden="true">
+          <svg viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+            <rect width="54" height="54" rx="12" fill="#E6DCCB"/>
+            <g fill="none" stroke="#6E1F2B" stroke-width="3.4" stroke-linecap="square">
+              <path d="M14 20v-6h6"/>
+              <path d="M40 20v-6h-6"/>
+              <path d="M14 34v6h6"/>
+              <path d="M40 34v6h-6"/>
+            </g>
+            <rect x="13" y="25.6" width="28" height="3.4" fill="#6E1F2B"/>
+          </svg>
+        </span>
+        <span class="txt">
+          <span class="nm">Bandit Scan</span>
+          <span class="ds">Document scanner, nothing leaves your phone &middot; Android</span>
+        </span>
+      </a>
+    </li>
+
+    <!--
+      To add the next app, copy one <li> block above and change four things:
+        the href, the icon <svg>, the name, and the description.
+      The folder it points at lives beside this file, e.g. /intervals/
+    -->
+
+  </ul>
+
+  <footer>
+    <a href="mailto:theingredientlist.co@gmail.com">theingredientlist.co@gmail.com</a>
+  </footer>
+</main>
+</body>
+</html>
