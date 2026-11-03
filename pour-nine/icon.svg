@@ -1,0 +1,8 @@
+<svg viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="pn-sky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00D1C1"/><stop offset=".5" stop-color="#1E7BE0"/><stop offset="1" stop-color="#7B3DE8"/></linearGradient></defs>
+  <rect width="54" height="54" rx="14" fill="url(#pn-sky)"/>
+  <g fill="#FFFFFF" fill-opacity=".9"><path d="M11 10h10v29a5 5 0 0 1-10 0z"/><path d="M33 10h10v29a5 5 0 0 1-10 0z"/></g>
+  <path d="M13 30h6v9a3 3 0 0 1-6 0z" fill="#FF3D8B"/>
+  <path d="M13 22h6v8h-6z" fill="#FFC53D"/>
+  <path d="M35 26h6v13a3 3 0 0 1-6 0z" fill="#FF3D8B"/>
+</svg>
