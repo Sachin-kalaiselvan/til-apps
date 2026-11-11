@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>GymGuild support</title>
+<meta name="description" content="Help with GymGuild: camera check, gym check-in, swimming distances and deleting your account.">
+<link rel="icon" href="/gymguild/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{color-scheme:dark;--bg:#08080A;--panel:#121218;--line:#25232F;--ink:#F6F6F8;--dim:#A0A0AD;
+    --ac:#A797FF;--ac2:#3DDC84;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px)}
+  *,*::before,*::after{box-sizing:inherit}
+  body{margin:0;color:var(--ink);line-height:1.65;font-size:16px;-webkit-text-size-adjust:100%;
+    font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    background:radial-gradient(110% 60% at 85% 0%,#241F3D 0%,transparent 60%) no-repeat,var(--bg)}
+  .wrap{max-width:720px;margin:0 auto;padding:46px 22px 90px}
+  a{color:var(--ac)}
+  h1{font-size:30px;margin:18px 0 4px;letter-spacing:-.025em;font-weight:800;line-height:1.15}
+  h2{font-size:18px;margin:36px 0 8px;font-weight:800;letter-spacing:-.01em}
+  h2::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ac);margin:0 10px 2px 0}
+  .sub{color:var(--dim);font-size:14px;margin:0 0 28px}
+  .back{display:inline-block;color:var(--dim);font-size:13.5px;text-decoration:none;margin-bottom:24px;font-weight:700}
+  .back:hover{color:var(--ink)}
+  .icon{display:block;width:86px;height:86px;border-radius:22px;box-shadow:0 12px 40px -10px rgba(167,151,255,.55)}
+  p,li{color:var(--dim)} p b,li b,strong{color:var(--ink)}
+  ul{padding-left:20px} li{margin:6px 0} li::marker{color:var(--ac)}
+  .get{display:inline-block;background:var(--ac);color:#0B0B10;text-decoration:none;font-weight:800;
+    padding:13px 22px;border-radius:999px;margin-top:6px;transition:transform .18s ease,box-shadow .2s ease}
+  .get:hover{transform:translateY(-2px);box-shadow:0 10px 30px -8px rgba(167,151,255,.7)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:22px 0 8px}
+  .feat{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px}
+  .feat b{display:block;color:var(--ink);font-size:15.5px;margin-bottom:4px}
+  .feat span{color:var(--dim);font-size:14px;line-height:1.55}
+  .q{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:10px 0}
+  .q b{display:block;color:var(--ink);margin-bottom:4px}
+  .q p{margin:0}
+  nav.links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:8px}
+  nav.links a{text-decoration:none;font-weight:700;font-size:14.5px}
+  nav.links a:hover{text-decoration:underline}
+  footer{margin-top:52px;padding-top:20px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+  footer a{color:var(--dim)}
+  .wrap>*{animation:rise .55s cubic-bezier(.2,.8,.2,1) both}
+  .wrap>*:nth-child(2){animation-delay:.04s} .wrap>*:nth-child(3){animation-delay:.08s}
+  .wrap>*:nth-child(4){animation-delay:.12s} .wrap>*:nth-child(n+5){animation-delay:.16s}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.wrap>*{animation:none} .get{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="/gymguild">&larr; GymGuild</a>
+<h1>Support</h1>
+<p class="sub">Something not working, or an idea for the app?</p>
+<p>Email <a href="mailto:theingredientlist.co@gmail.com">theingredientlist.co@gmail.com</a>. Include your phone model and Android version. It makes problems much easier to track down.</p>
+
+<h2>Common questions</h2>
+<div class="q"><b>The camera check isn’t counting my reps.</b><p>Stand two to three metres from the phone so your whole body is in view. The banner at the top turns green when it can see you, and counting starts after a 3-2-1 countdown. It only counts full movements of your body, so small movements like turning your head are ignored on purpose.</p></div>
+<div class="q"><b>Is the camera recording me?</b><p>No. Each frame is checked on your phone and discarded. No video or photo is saved or sent. Only the exercise, the rep count and the time are kept.</p></div>
+<div class="q"><b>My gym check-in didn’t count.</b><p>Set your gym while you are inside it, then start a live session there. You need to stay inside for at least 20 minutes. Allow location for GymGuild while the app is in use, and turn off any app that changes your location.</p></div>
+<div class="q"><b>Why can’t I edit a verified session?</b><p>Verified sessions can’t be edited, so the leagues stay fair. If something is wrong, delete the session and log it again.</p></div>
+<div class="q"><b>Why are swims in metres?</b><p>Pools are measured in metres, so swims are entered and shown in metres, with pace per 100 m. Runs, rides and walks use kilometres or miles, whichever you choose in your profile.</p></div>
+<div class="q"><b>Why is GymGuild only for over-18s?</b><p>GymGuild puts people in public guilds with other users. Under Indian data protection law, anyone under 18 needs verified permission from a parent first, which the app doesn’t support yet.</p></div>
+<div class="q"><b>How do I delete my account?</b><p>Go to Profile, then Data, then Delete account and data. Everything is removed from our server and your phone. You can also email us and we will do it within 30 days.</p></div>
+<div class="q"><b>How do I report someone?</b><p>Open their profile or guild and choose Report, or Block to stop seeing them. We review every report.</p></div>
+
+<footer><a href="/gymguild">GymGuild</a> · <a href="/gymguild/privacy">Privacy policy</a> · <a href="/gymguild/terms">Terms of use</a><br><a href="mailto:theingredientlist.co@gmail.com">theingredientlist.co@gmail.com</a> · The Ingredient List, Bengaluru</footer>
+</div>
+</body>
+</html>
