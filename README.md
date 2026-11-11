@@ -27,6 +27,7 @@ Static HTML, no build step. Vercel deploys on every push to `main`.
 | Arrow Out | `arrow-out/` | `/arrow-out` | `/arrow-out/privacy` | `co.theingredientlist.arrowout` | AdMob |
 | Bolt Up | `bolt-up/` | `/bolt-up` | `/bolt-up/privacy` | `co.theingredientlist.boltup` | AdMob |
 | Pour Nine | `pour-nine/` | `/pour-nine` | `/pour-nine/privacy` | `co.theingredientlist.pournine` | AdMob |
+| GymGuild | `gymguild/` | `/gymguild` | `/gymguild/privacy` | `co.theingredientlist.gymguild` | none |
 
 Each page is `<folder>/index.html`. Link to pages without `.html` and without a
 trailing slash (e.g. `/bandit-scan/privacy`) — `vercel.json` sets `cleanUrls` and

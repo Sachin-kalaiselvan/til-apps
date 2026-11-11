@@ -2,59 +2,100 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>GymGuild terms of use</title>
+<meta name="description" content="The rules for using GymGuild.">
+<link rel="icon" href="/gymguild/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{color-scheme:light dark;--bg:#fff;--tx:#16161a;--mu:#5d5d6a;--ac:#6a58e8}
-  @media (prefers-color-scheme:dark){:root{--bg:#0b0b0e;--tx:#f2f2f5;--mu:#a0a0ad;--ac:#a797ff}}
-  body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-  main{max-width:720px;margin:0 auto;padding:48px 22px 80px}
-  h1{font-size:30px;line-height:1.2;margin:0 0 6px}
-  h2{font-size:19px;margin:34px 0 8px}
-  p,li{color:var(--mu)} strong{color:var(--tx)} a{color:var(--ac)}
+  :root{color-scheme:dark;--bg:#08080A;--panel:#121218;--line:#25232F;--ink:#F6F6F8;--dim:#A0A0AD;
+    --ac:#A797FF;--ac2:#3DDC84;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px)}
+  *,*::before,*::after{box-sizing:inherit}
+  body{margin:0;color:var(--ink);line-height:1.65;font-size:16px;-webkit-text-size-adjust:100%;
+    font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    background:radial-gradient(110% 60% at 85% 0%,#241F3D 0%,transparent 60%) no-repeat,var(--bg)}
+  .wrap{max-width:720px;margin:0 auto;padding:46px 22px 90px}
+  a{color:var(--ac)}
+  h1{font-size:30px;margin:18px 0 4px;letter-spacing:-.025em;font-weight:800;line-height:1.15}
+  h2{font-size:18px;margin:36px 0 8px;font-weight:800;letter-spacing:-.01em}
+  h2::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ac);margin:0 10px 2px 0}
+  .sub{color:var(--dim);font-size:14px;margin:0 0 28px}
+  .back{display:inline-block;color:var(--dim);font-size:13.5px;text-decoration:none;margin-bottom:24px;font-weight:700}
+  .back:hover{color:var(--ink)}
+  .icon{display:block;width:86px;height:86px;border-radius:22px;box-shadow:0 12px 40px -10px rgba(167,151,255,.55)}
+  p,li{color:var(--dim)} p b,li b,strong{color:var(--ink)}
+  ul{padding-left:20px} li{margin:6px 0} li::marker{color:var(--ac)}
+  .get{display:inline-block;background:var(--ac);color:#0B0B10;text-decoration:none;font-weight:800;
+    padding:13px 22px;border-radius:999px;margin-top:6px;transition:transform .18s ease,box-shadow .2s ease}
+  .get:hover{transform:translateY(-2px);box-shadow:0 10px 30px -8px rgba(167,151,255,.7)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:22px 0 8px}
+  .feat{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px}
+  .feat b{display:block;color:var(--ink);font-size:15.5px;margin-bottom:4px}
+  .feat span{color:var(--dim);font-size:14px;line-height:1.55}
+  .q{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:10px 0}
+  .q b{display:block;color:var(--ink);margin-bottom:4px}
+  .q p{margin:0}
+  nav.links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:8px}
+  nav.links a{text-decoration:none;font-weight:700;font-size:14.5px}
+  nav.links a:hover{text-decoration:underline}
+  footer{margin-top:52px;padding-top:20px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+  footer a{color:var(--dim)}
+  .wrap>*{animation:rise .55s cubic-bezier(.2,.8,.2,1) both}
+  .wrap>*:nth-child(2){animation-delay:.04s} .wrap>*:nth-child(3){animation-delay:.08s}
+  .wrap>*:nth-child(4){animation-delay:.12s} .wrap>*:nth-child(n+5){animation-delay:.16s}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.wrap>*{animation:none} .get{transition:none}}
 </style>
 </head>
-<body><main>
-<h1>GymGuild terms of use</h1>
-<p>Last updated 10 November 2026. GymGuild is published by The Ingredient List. By using the app you agree to these terms.</p>
+<body>
+<div class="wrap">
+<a class="back" href="/gymguild">&larr; GymGuild</a>
+<h1>Terms of use</h1>
+<p class="sub">Last updated 11 November 2026. GymGuild is published by The Ingredient List, Bengaluru. By using the app, you agree to these terms.</p>
 
-<h2>Who can use it</h2>
-<p>You must be 18 or older. One account per person.</p>
+<h2>Who can use GymGuild</h2>
+<p>You must be at least 18 years old. Please keep to one account per person.</p>
 
-<h2>Play fair</h2>
+<h2>Be honest about your training</h2>
 <ul>
-  <li>Log only training you actually did. Don’t fake sessions, locations, camera checks or lift numbers.</li>
-  <li>Don’t use tools that fake your location or tamper with the app.</li>
-  <li>Sessions that look impossible are rejected or removed, and accounts that cheat repeatedly are removed from guilds and leaderboards.</li>
+  <li>Only log sessions you have actually done.</li>
+  <li>Don’t fake sessions, locations, camera checks or lift numbers, and don’t use apps or tools that fake your location or change how GymGuild works.</li>
+  <li>Sessions that look impossible are rejected or removed. If an account cheats repeatedly, we remove it from guilds and leaderboards.</li>
 </ul>
 
-<h2>What you may not post</h2>
-<p>Your display name, guild names, guild descriptions and challenge names are visible to other users. They must not contain:</p>
+<h2>What you can’t post</h2>
+<p>Other people can see your display name, and the names and descriptions of guilds and challenges you create. These must not include:</p>
 <ul>
-  <li>harassment, bullying, threats or hate towards any person or group</li>
+  <li>harassment, bullying, threats or hate towards anyone</li>
   <li>sexual content or nudity</li>
-  <li>violence, self-harm or dangerous activities</li>
-  <li>spam, advertising, scams or links to other services</li>
-  <li>someone else’s personal information, or impersonation of another person</li>
+  <li>violence, self-harm or dangerous behaviour</li>
+  <li>spam, adverts, scams or links to other services</li>
+  <li>someone else’s personal details, or a name that pretends to be another person</li>
   <li>anything illegal</li>
 </ul>
 
-<h2>Reporting and blocking</h2>
-<p>You can block anyone or report a member or guild from inside the app. We review reports and may remove content, guilds or accounts that break these terms, without notice.</p>
+<h2>Blocking and reporting</h2>
+<p>You can block or report any member or guild from inside the app. We review reports and may remove content, guilds or accounts that break these terms, without warning.</p>
 
-<h2>Your health</h2>
-<p>GymGuild is a training log and a game, not medical advice. Train within your limits and talk to a doctor before starting a new programme. You are responsible for your own safety while exercising.</p>
+<h2>Train safely</h2>
+<p>GymGuild is a training log and a game. It isn’t medical advice. Train within your limits, and talk to a doctor before starting a new exercise programme. You are responsible for your own safety while you exercise.</p>
 
 <h2>Your data</h2>
-<p>How we handle your data is explained in the <a href="/gymguild/privacy">privacy policy</a>. You can delete your account at any time in Profile, then Data, then Delete account and data.</p>
+<p>Our <a href="/gymguild/privacy">privacy policy</a> explains what we store and why. You can delete your account at any time in Profile, then Data, then Delete account and data.</p>
 
-<h2>The app itself</h2>
-<p>We may change, pause or end features, seasons and leaderboards. The app is provided as it is, and to the extent the law allows we are not liable for losses arising from its use.</p>
+<h2>Changes to the app</h2>
+<p>We may change, pause or remove features, seasons and leaderboards. The app is provided as it is, and as far as the law allows, we are not responsible for losses that come from using it.</p>
 
-<h2>Changes</h2>
-<p>If these terms change, we will update this page and tell you in the app.</p>
+<h2>Changes to these terms</h2>
+<p>If we change these terms, we will update this page and let you know in the app.</p>
 
 <h2>Contact</h2>
 <p><a href="mailto:theingredientlist.co@gmail.com">theingredientlist.co@gmail.com</a></p>
-</main></body>
+
+<footer><a href="/gymguild">GymGuild</a> · <a href="/gymguild/privacy">Privacy policy</a> · <a href="/gymguild/support">Support</a><br><a href="mailto:theingredientlist.co@gmail.com">theingredientlist.co@gmail.com</a> · The Ingredient List, Bengaluru</footer>
+</div>
+</body>
 </html>
