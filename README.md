@@ -1,53 +1,41 @@
 # til-apps
 
-Public pages for apps published by The Ingredient List — landing pages, privacy
-policies, terms and support, one folder per app.
+public pages for the apps the ingredient list ships. landing page, privacy, terms, support. one folder per app.
 
-Live at **https://apps.theingredientlist.co**
+live: **https://apps.theingredientlist.co**
 
-Static HTML, no build step. Vercel deploys on every push to `main`.
+plain html, no build. vercel deploys every push to `main`.
 
-## Layout
+## layout
 
 ```
-/                       index of all apps (one card per app)
-/<app>                  landing page        <app>/index.html
-/<app>/privacy          privacy policy      <app>/privacy/index.html   <- Play Console needs this URL
-/<app>/terms            terms of use        <app>/terms/index.html
-/<app>/support          support page        <app>/support/index.html
+/                       all apps, one card each
+/<app>                  landing          <app>/index.html
+/<app>/privacy          privacy policy   <app>/privacy/index.html   <- play console wants this url
+/<app>/terms            terms            <app>/terms/index.html
+/<app>/support          support          <app>/support/index.html
 ```
 
-## Apps
+## apps
 
-| App | Folder | Website | Privacy policy | Play package | Ads |
-| --- | --- | --- | --- | --- | --- |
-| Core Blocks | `coreblocks/` | `/coreblocks` | `/coreblocks/privacy` | `co.theingredientlist.coreblocks` | AdMob |
-| Bandit Scan | `bandit-scan/` | `/bandit-scan` | `/bandit-scan/privacy` | `co.theingredientlist.bandit` | none |
-| Intervals | `intervals/` | `/intervals` | `/intervals/privacy` | `co.theingredientlist.intervals` | none |
-| Arrow Out | `arrow-out/` | `/arrow-out` | `/arrow-out/privacy` | `co.theingredientlist.arrowout` | AdMob |
-| Bolt Up | `bolt-up/` | `/bolt-up` | `/bolt-up/privacy` | `co.theingredientlist.boltup` | AdMob |
-| Pour Nine | `pour-nine/` | `/pour-nine` | `/pour-nine/privacy` | `co.theingredientlist.pournine` | AdMob |
-| GymGuild | `gymguild/` | `/gymguild` | `/gymguild/privacy` | `co.theingredientlist.gymguild` | none |
+| app | folder | privacy | play package | ads |
+| --- | --- | --- | --- | --- |
+| core blocks | `coreblocks/` | `/coreblocks/privacy` | `co.theingredientlist.coreblocks` | admob |
+| bandit scan | `bandit-scan/` | `/bandit-scan/privacy` | `co.theingredientlist.bandit` | none |
+| intervals | `intervals/` | `/intervals/privacy` | `co.theingredientlist.intervals` | none |
+| arrow out | `arrow-out/` | `/arrow-out/privacy` | `co.theingredientlist.arrowout` | admob |
+| bolt up | `bolt-up/` | `/bolt-up/privacy` | `co.theingredientlist.boltup` | admob |
+| pour nine | `pour-nine/` | `/pour-nine/privacy` | `co.theingredientlist.pournine` | admob |
+| gymguild | `gymguild/` | `/gymguild/privacy` | `co.theingredientlist.gymguild` | none |
 
-Each page is `<folder>/index.html`. Link to pages without `.html` and without a
-trailing slash (e.g. `/bandit-scan/privacy`) — `vercel.json` sets `cleanUrls` and
-`trailingSlash: false`, so other forms get redirected.
+link without `.html` and without a trailing slash (`/bandit-scan/privacy`). `vercel.json` has `cleanUrls` + `trailingSlash: false` so anything else redirects.
 
-Every landing page has a commented-out "Get it on Google Play" button with the real
-package id. Uncomment it once that app is live.
+every landing page has a commented-out "get it on google play" button with the real package id. uncomment once the app's live.
 
-## Adding an app
+## new app
 
-Copy the `coreblocks/` folder, rename it, edit the four pages, add a card to the
-root `index.html`. Push. That's the whole process — no DNS change, no new project.
+copy `coreblocks/`, rename, edit the 4 pages, add a card to the root `index.html`, push. that's it, no dns, no new project.
 
-## Play Console fields
+## play console
 
-| Field | Value |
-| --- | --- |
-| Privacy policy | https://apps.theingredientlist.co/coreblocks/privacy |
-| Website | https://apps.theingredientlist.co/coreblocks |
-| Support email | theingredientlist.co@gmail.com |
-
-Every app uses the same pattern: `https://apps.theingredientlist.co/<folder>/privacy`
-and `https://apps.theingredientlist.co/<folder>`.
+privacy policy `https://apps.theingredientlist.co/<folder>/privacy`, website `https://apps.theingredientlist.co/<folder>`, support email theingredientlist.co@gmail.com.
